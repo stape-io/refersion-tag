@@ -425,10 +425,21 @@ function getItems() {
         eventData.items.forEach((d,i) => {
             let item = {};
 
-            if (d.name) item.name = d.name || d.item_name || d.title;
-            if (d.sku) item.sku = d.sku || d.item_sku || d.item_id || d.id;
-            if (d.quantity) item.quantity = d.quantity || d.item_quantity || d.qty;
-            if (d.price) item.price = d.price || d.item_price;
+            if (d.name) item.name = d.name;
+            else if (d.item_name) item.name = d.item_name;
+            else if (d.title) item.name = d.title;
+
+            if (d.sku) item.sku = d.sku;
+            else if (d.item_sku) item.sku = d.item_sku;
+            else if (d.item_id) item.sku = d.item_id;
+            else if (d.id) item.sku = d.id;
+
+            if (d.quantity) item.quantity = d.quantity;
+            else if (d.item_quantity) item.quantity = d.item_quantity;
+            else if (d.qty) item.quantity = d.qty;
+
+            if (d.price) item.price = d.price;
+            else if (d.item_price) item.price = d.item_price;
 
             items.push(item);
         });
