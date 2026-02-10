@@ -1,7 +1,7 @@
 homepage: 'https://stape.io/'
 documentation: 'https://github.com/stape-io/refersion-tag'
 versions:
-  - sha: b225bf7de79e7573284d81b071b46291ed56f7e9
+  - sha: f52cd7e3f4fcccbde224faaa62f4290838dd333d
     changeNotes: Added consent section.
   - sha: aeb1c9335533c8463d5eb797a5917694fb72b32d
     changeNotes: Items parsing fix.
